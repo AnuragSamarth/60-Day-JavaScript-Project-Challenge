@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: auto;
+}
+.container{
+    width: 350px;
+    /* background-color: red; */
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    border: 2px solid #1b1b1b;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.text{
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 30%;
+}
+.username{
+    width: 60%;
+    padding: 3px;
+    border: 1px solid #1b1b1b;
+}
+.Password{
+    width: 60%;
+    padding: 3px;
+    border: 1px solid #1b1b1b;
+}
+.submit{
+    padding: 8px;
+    border-radius: 15px;
+    margin-left: 40%;
+    margin-top: 15px;
+    border: 1px solid #1b1b1b;
+    cursor: pointer;
+}
+.fa-regular{
+    cursor: pointer;
+}
