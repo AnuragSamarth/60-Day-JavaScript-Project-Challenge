@@ -15,12 +15,12 @@
         <form method="post">
            <div>
             <label for="username">Username: </label>
-            <input type="text" value="" name="username" class="username">
+            <input type="text" value="" name="username" class="username" required>
            </div><br>
            <div>
             <label for="Password">Password:</label>
-            <input type="text" name="Password" class="Password" />
-            <i class="fa-regular fa-eye-slash"></i>
+            <input type="password" name="Password" class="Password" required />
+           <span><i class="fa-regular fas fa-eye eye_toggle"></i></span>
             
            </div>
            <button type="submit" class="submit">Log In</button>

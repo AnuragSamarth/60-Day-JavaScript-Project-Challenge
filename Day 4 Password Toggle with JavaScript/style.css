@@ -21,6 +21,9 @@ html,body{
     border: 2px solid #1b1b1b;
     padding: 50px;
     border-radius: 15px;
+    position: relative;
+    top: 150px;
+    box-shadow: 7px 7px 17px -5px rgba(0,0,0,0.48);
 }
 
 .text{
@@ -30,12 +33,14 @@ html,body{
 }
 .username{
     width: 60%;
-    padding: 3px;
+    padding: 5px;
+    border-radius: 5px;
     border: 1px solid #1b1b1b;
 }
 .Password{
     width: 60%;
-    padding: 3px;
+    padding: 5px;
+    border-radius: 5px;
     border: 1px solid #1b1b1b;
 }
 .submit{
@@ -47,5 +52,8 @@ html,body{
     cursor: pointer;
 }
 .fa-regular{
+    position: absolute;
+    left: 70%;
+    top: 58%;
     cursor: pointer;
 }
