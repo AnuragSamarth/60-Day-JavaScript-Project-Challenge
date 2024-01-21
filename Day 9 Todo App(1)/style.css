@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --hue: 900;
+    --primary: hsl(var(--hue), 76%, 36%);
+    --primary-light: hsl(var(--hue), 76%, 56%);
+    --primary-super-light: hsl(var(--hue), 36%, 95%);
+}
+#main{
+    width: 100%;
+}
+body{
+    font-family: monospace;
+    padding: 1rem;
+}
+.container{
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+    /* background-color: rebeccapurple; */
+}
+.heading{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+.form{
+    border: 0.5px solid var(--primary);
+    display: flex;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-super-light);
+    height: 55px;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.todo-title-input{
+    width: 90%;
+    height: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+.todo-form-button{
+    width: 10%;
+    height: 70%;
+    background-color: var(--primary);
+    color: var(--primary-super-light);
+    border: none;
+    font-size: 1.2rem;
+    font-family: inherit;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.todos{
+    margin-top: 1rem;
+}
+.todo{
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    height: 42px;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+.toggle-delete{
+    display: flex;
+    gap: 1rem;
+    /* background-color: red; */
+}
+.delete-todo-button{
+    font-family: inherit;
+    font-weight: bold;
+    width: 20px;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.todo-checkbox{
+    width: 20px;
+    outline: none;
+    border: none;
+    accent-color: white;
+}
+.todo-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-super-light);
+    text-transform: capitalize;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.8;
+}
