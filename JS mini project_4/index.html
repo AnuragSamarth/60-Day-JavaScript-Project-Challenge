@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Changer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer type="module"></script>
+</head>
+<body>
+    <div id="main">
+        <h1 class="heading">Todo List</h1>
+        <form id="form" class="form container">
+            <input type="text" id="todo-title-input" class="todo-title-input" placeholder="Todo title">
+            <button type="submit" class="todo-form-button">Add</button>
+        </form>
+        <ul class="todos container">
+            <li class="todo" data-id="1">
+                <span class="todo-title">Todo 1</span>
+                <div class="toggle-delete">
+                    <input type="checkbox" name="completed" class="todo-checked">
+                    <button class="delete-todo-button">x</button>
+                </div>
+            </li>
+        </ul>
+        <div class="counter">
+            <div class="num"></div>
+            <button class="inc">increase</button>
+            <button class="dec">decrease</button>
+        </div>
+    </div>
+</body>
+</html>
