@@ -29,6 +29,7 @@ html,body{
 }
 #input{
     height: 100px;
+    overflow: hidden;
 }
 .output{
     font-size: 30px;

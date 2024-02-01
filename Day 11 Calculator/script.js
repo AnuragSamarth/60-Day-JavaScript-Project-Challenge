@@ -17,5 +17,6 @@ button.forEach((element)=>{
        else{
         input.innerText += e.target.textContent;
        }
+       input.scrollLeft = input.scrollWidth;
       })
 })
