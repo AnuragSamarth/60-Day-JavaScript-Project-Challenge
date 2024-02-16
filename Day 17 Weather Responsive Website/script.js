@@ -17,7 +17,7 @@ btn.addEventListener("click", (e)=>{
 })
 
 const fetchData = async(target) =>{
-
+  try {
    const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=d7d45de7bb4445bfbc5150419241602&q=${target}&aqi=no`);
    const data = await res.json();
 
@@ -26,6 +26,9 @@ const fetchData = async(target) =>{
    const {current: {temp_c ,condition:{icon,text} },location: {name,localtime} } = data
 
    updateDom(temp_c, name,icon,text,localtime);
+  } catch(e){
+    alert('Location not Found'); 
+  }
 };
 
 function updateDom(temperature, city,icon,text,time){
