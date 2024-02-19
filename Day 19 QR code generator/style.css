@@ -6,3 +6,48 @@
 #main{
     width: 100%;
 }
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(202, 202, 202);
+}
+
+.QR-container{
+    width: 500px;
+    /* height: 40px; */
+    padding: 30px;
+    position: absolute;
+    top: 20%;
+    border: 2px solid black;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    flex-direction: column;
+}
+
+.input{
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.btn{
+    padding: 6px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* background-color: lightblue; */
+    transition: background-color 0.5s ease;
+}
+.btn:hover{
+    background-color: rgb(137, 188, 205);
+}
