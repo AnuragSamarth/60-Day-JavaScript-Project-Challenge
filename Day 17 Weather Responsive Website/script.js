@@ -18,7 +18,8 @@ btn.addEventListener("click", (e)=>{
 
 const fetchData = async(target) =>{
   try {
-   const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=d7d45de7bb4445bfbc5150419241602&q=${target}&aqi=no`);
+    const apiKey = '';
+   const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${target}&aqi=no`);
    const data = await res.json();
 
    console.log(data);
