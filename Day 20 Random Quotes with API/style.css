@@ -5,4 +5,55 @@
 }
 #main{
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 500px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+}
+.heading{
+    font-size: 25px;
+    padding: 10px;
+}
+.quotes-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+.text-author{
+    font-weight: 800;
+    padding: 10px;
+    margin-top: 20px;
+}
+.btn{
+    margin-top: 30px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color ease 0.5s;
+    transition: color ease 0.5s;
+}
+.btn:hover{
+    background-color: lightslategray;
+    color: white;
 }
