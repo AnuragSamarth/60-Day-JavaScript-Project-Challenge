@@ -20,3 +20,16 @@ form.addEventListener("submit", (e)=>{
         alert("Please Enter the same password");
       }
 })
+
+const createStrongPassword = ()=>{
+   
+    const randomCharacter = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()?:;<=>?{}`
+    let randomPassword = '';
+
+    while( randomPassword.length != 8){
+    randomPassword += randomCharacter[Math.floor(Math.random() * randomCharacter.length)];
+    }
+    console.log(randomPassword);
+}
+
+createStrongPassword();

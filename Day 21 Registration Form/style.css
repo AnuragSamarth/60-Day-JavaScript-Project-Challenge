@@ -49,16 +49,38 @@ background: linear-gradient(180deg, rgba(89,81,222,0.9697841726618706) 0%, rgba(
     flex-direction: column;
     align-items: center;
 }
-.input-text{
-    display: block;
-    width: 80%;
+
+.input-div{
+    width: 85%;
+    /* background-color: lightcoral; */
+    padding: 8px;
+}
+ .input-text{
+    width: 100%;
     padding: 15px;
     margin-top: 25px;
     border: none;
     outline: none;
     border-radius: 5px;
     font-weight: 600;
+    /* background-color: aqua; */
+} 
+#input-password{
+    width: 85%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.show-btn{
+    position: absolute;
+    left: 85%;
+    transform: translateY(10px);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
 .check-box{
     /* background-color: lavender; */
     display: flex;
