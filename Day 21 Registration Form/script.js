@@ -5,6 +5,8 @@ const inputLastName = document.querySelector(".last");
 const inputEmail = document.querySelector(".email");
 const inputPassword = document.querySelector(".pass");
 const inputRepassword = document.querySelector(".repass");
+const checkBox = document.querySelector(".ckeckbox");
+const passwordGenerateBtn = document.querySelector(".pass-btn");
 
 form.addEventListener("submit", (e)=>{
       e.preventDefault();
@@ -13,15 +15,17 @@ form.addEventListener("submit", (e)=>{
       }else if(!inputLastName.value){
         alert("Please enter a last name");
       }else if(!inputEmail.value){
-        alert("Please Enter the mail");
+        alert("Please enter the mail");
       }else if(!inputPassword.value){
-        alert("Please Enter the password");
+        alert("Please enter the password");
       }else if(!inputRepassword.value){
-        alert("Please Enter the same password");
+        alert("Please enter the same password");
       }
 })
 
-const createStrongPassword = ()=>{
+passwordGenerateBtn.addEventListener("click", createStrongPassword)
+
+function createStrongPassword(){
    
     const randomCharacter = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()?:;<=>?{}`
     let randomPassword = '';
@@ -29,7 +33,5 @@ const createStrongPassword = ()=>{
     while( randomPassword.length != 8){
     randomPassword += randomCharacter[Math.floor(Math.random() * randomCharacter.length)];
     }
-    console.log(randomPassword);
+    alert(randomPassword);
 }
-
-createStrongPassword();

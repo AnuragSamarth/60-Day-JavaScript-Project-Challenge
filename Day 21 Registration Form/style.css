@@ -58,7 +58,7 @@ background: linear-gradient(180deg, rgba(89,81,222,0.9697841726618706) 0%, rgba(
  .input-text{
     width: 100%;
     padding: 15px;
-    margin-top: 25px;
+    margin-top: 15px;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -79,6 +79,17 @@ background: linear-gradient(180deg, rgba(89,81,222,0.9697841726618706) 0%, rgba(
     text-align: center;
     cursor: pointer;
     user-select: none;
+}
+.pass-btn{
+    padding: 6px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: rgb(122, 149, 177);
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 .check-box{
