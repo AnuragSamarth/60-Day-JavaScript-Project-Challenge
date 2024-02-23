@@ -7,6 +7,7 @@ const inputPassword = document.querySelector(".pass");
 const inputRepassword = document.querySelector(".repass");
 const checkBox = document.querySelector(".ckeckbox");
 const passwordGenerateBtn = document.querySelector(".pass-btn");
+const showBtn = document.querySelector(".show-btn");
 
 form.addEventListener("submit", (e)=>{
       e.preventDefault();
@@ -33,5 +34,13 @@ function createStrongPassword(){
     while( randomPassword.length != 8){
     randomPassword += randomCharacter[Math.floor(Math.random() * randomCharacter.length)];
     }
-    alert(randomPassword);
+    alert(`Copy the password press the Ctrl + C button:-  ${randomPassword}`);
 }
+
+showBtn.addEventListener("click", ()=>{
+    if(inputPassword.type === "password"){
+       inputPassword.type = "text";
+    }else{
+      inputPassword.type = "password";
+    }
+});

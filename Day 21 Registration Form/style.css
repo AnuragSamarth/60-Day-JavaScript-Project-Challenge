@@ -90,6 +90,7 @@ background: linear-gradient(180deg, rgba(89,81,222,0.9697841726618706) 0%, rgba(
     color: white;
     border-radius: 10px;
     font-weight: 600;
+    user-select: none;
 }
 
 .check-box{
