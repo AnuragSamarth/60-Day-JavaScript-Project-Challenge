@@ -31,6 +31,7 @@
     margin: 40px;
     font-size: 20px;
     font-weight: 540;
+    /* color: red; */
 }
 .btn{
     padding: 10px 30px;
@@ -41,8 +42,4 @@
     cursor: pointer;
     border: 1px solid black;
     font-size: 14px;
-    transition: background-color ease-in-out .3s;
-}
-.btn:hover{
-    background-color: lightgreen;
 }
