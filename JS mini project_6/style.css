@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.container img{
+      width: 100%;
+      height: 100%;
+      /* object-fit: cover; */
+      background-position: center;
+      border-radius: 10px;
+}
+.love{
+    position: absolute;
+    color: rgba(236, 20, 20, 0.885);
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0.9;
+    transition: transform ease 0.5s;
+}
