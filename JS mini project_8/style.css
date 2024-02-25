@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    position: relative;
+    overflow: hidden;
+}
+.elem{
+    width: 100%;
+    height: 150px;
+    /* background-color: lightblue; */
+    border-bottom: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.elem h1{
+    font-size: 100px;
+    font-family:monospace;
+    color: white;
+}
+.elem img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    transition: all linear 0.3s;
+}
