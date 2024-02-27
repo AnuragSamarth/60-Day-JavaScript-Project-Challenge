@@ -3,6 +3,7 @@ const apiKey = 'a3213f1583e6456195577527cb5efa2d';
 const searchBox = document.querySelector(".search-box");
 const btn = document.querySelector(".btn");
 const newsContainer = document.querySelector(".news-container");
+const newsBox = document.querySelector(".news-box");
 
 btn.addEventListener("click", ()=>{
     let input = searchBox.value;
@@ -10,7 +11,6 @@ btn.addEventListener("click", ()=>{
     newsFetch(input);
     searchBox.value = '';
 });
-
 async function newsFetch(input){
     try{
      let res = await fetch(`https://newsapi.org/v2/everything?q=${input}&from=2024-01-27&sortBy=publishedAt&apiKey=${apiKey}`);
@@ -25,9 +25,9 @@ async function newsFetch(input){
 
     let clutter = '';
     articlesArray.forEach(elem =>{
-       clutter += `<div class="news-box">
+       clutter += `<div class="news-box" onclick="openNewSite">
        <div class="news-img">
-           <img src="${elem.urlToImage}" alt="${elem.url}">
+       <a href="${elem.url}"><img src="${elem.urlToImage}" alt=""></a>
        </div>
        <h2>${elem.title}</h2>
        <p>${elem.description}</p>
