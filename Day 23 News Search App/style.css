@@ -15,6 +15,7 @@ html,body{
     /* height: 100vh; */
     /* background-color: lightslategray; */
     position: relative;
+    overflow: hidden;
 }
 .nav-bar{
     /* width: 100%; */
@@ -54,11 +55,11 @@ html,body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgb(145, 131, 131);
+    /* background-color: rgb(145, 131, 131); */
 }
 .news-box{
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -78,7 +79,7 @@ html,body{
     width: 90%;
     /* height: 200px; */
     object-fit: cover;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .news-img img{
     width: 100%;
