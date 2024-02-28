@@ -80,6 +80,23 @@ html,body{
     object-fit: cover;
     object-position: center;   
 }
+.show-more{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+.show-btn{
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 @media(max-width: 584px){
     .heading h2 {
