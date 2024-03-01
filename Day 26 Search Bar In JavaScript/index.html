@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar In JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="container">
+        <h3 class="heading">Search Bar Feature</h3>
+        <div class="input-bar">
+          <input type="text" class="input-text" placeholder="Search Bar" data-search/>
+        </div>
+        <div class="data-container" data-user-card-container></div>
+        <template data-user-template>
+            <div class="card">
+                <div class="header" data-header></div>
+                <div class="body" data-body></div>
+              </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>
