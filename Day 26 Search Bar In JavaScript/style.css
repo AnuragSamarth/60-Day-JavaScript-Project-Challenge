@@ -51,3 +51,6 @@
     /* background-color: brown; */
     border: 1px solid black;
 }
+.hide{
+    display: none;
+}
