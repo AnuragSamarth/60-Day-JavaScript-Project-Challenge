@@ -14,7 +14,7 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .row{
@@ -26,4 +26,9 @@ html,body{
     height: 100px;
     border: 1px solid white;
     cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
