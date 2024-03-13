@@ -12,3 +12,14 @@
     height: 100vh;
     background-color: lightsteelblue;
 }
+.option-container > div{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.option-container > div :hover{
+    scale: 1px;
+}
