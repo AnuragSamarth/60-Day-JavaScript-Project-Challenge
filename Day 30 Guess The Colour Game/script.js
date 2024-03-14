@@ -23,7 +23,7 @@ function incrementScore(){
 
 function validateResult(el){
     const selectColor = el.target.style.backgroundColor;
-    // console.log(selectColor);
+    // console.log(selectColor); 
     if(selectColor === randomColor){
         incrementScore();
     }else{
