@@ -168,6 +168,7 @@ nextButton.addEventListener('click', ()=>{
         // currentQuestionIndex++;
       }else{
         questions.innerHTML = 'All question have been answered!!!';
+        options.innerHTML = `<h2 class='score'>Your total score: ${score}</h2>`
       }
       console.log(currentQuestionIndex);
 })
@@ -185,3 +186,15 @@ prevButton.addEventListener('click', ()=>{
       }
 })
 
+options.addEventListener('click', (e)=>{
+  console.log(currentQuestionIndex);
+     const answerValue = e.target.innerText;
+     const correctAnswer = quizArr[currentQuestionIndex].correct_answer;
+     console.log(correctAnswer);
+     if(answerValue === correctAnswer){
+      score += 1;
+      alert('Right answer');
+     }else{
+      alert('wrong answer');
+     }
+})
