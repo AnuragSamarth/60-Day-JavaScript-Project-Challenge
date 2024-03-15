@@ -126,19 +126,25 @@ const questions = document.querySelector(".questions h2");
 const nextButton = document.querySelector(".next-button");
 const prevButton = document.querySelector(".prev-button");
 const option = document.querySelectorAll(".option h5");
+const options = document.querySelector(".options");
+let score = 0;
 
 window.addEventListener('load', ()=>{
-    let questionNumber = randomQuestion();
-    questions.innerText = quizArr[questionNumber].question;
-    for(let i= 0; i<quizArr.length; i++){
-        option[i].innerText = quizArr[questionNumber].incorrect_answers[uniqueRandomNumbers[i]];
-    }
+    displayQuestions();
 });
+console.log(quizArr.length);
 
-function randomQuestion(){
-       return Math.floor(Math.random() * quizArr.length);
+function displayQuestions(){
+       questions.innerHTML = quizArr[0].question;
+       for(let i=0; i<quizArr[0].incorrect_answers.length; i++){
+         option[i].innerHTML = quizArr[0].incorrect_answers[uniqueRandomNumbers[i]]
+       }
+       quizArr.splice(quizArr[0],1);
+      //  console.log(quizArr);
 }
 
+
+// This function is to swap the positions of options
 function generateUniqueRandomNumbers(length, range) {
     const result = [];
     const numbers = range.slice();
@@ -149,7 +155,33 @@ function generateUniqueRandomNumbers(length, range) {
     }  
     return result;
   }
-  
-const uniqueRandomNumbers = generateUniqueRandomNumbers(4, [0, 1, 2, 3]);
+const uniqueRandomNumbers = generateUniqueRandomNumbers(4, [0, 1,2,3]);
 
+let currentQuestionIndex = 0;
+nextButton.addEventListener('click', ()=>{
+      currentQuestionIndex++;
+      if(currentQuestionIndex < quizArr.length){
+        questions.innerHTML = quizArr[currentQuestionIndex].question;
+        for(let i=0; i<quizArr[currentQuestionIndex].incorrect_answers.length; i++){
+          option[i].innerHTML = quizArr[currentQuestionIndex].incorrect_answers[uniqueRandomNumbers[i]]
+        }
+        // currentQuestionIndex++;
+      }else{
+        questions.innerHTML = 'All question have been answered!!!';
+      }
+      console.log(currentQuestionIndex);
+})
+
+prevButton.addEventListener('click', ()=>{
+  console.log(currentQuestionIndex)
+  currentQuestionIndex--;
+  if(currentQuestionIndex <= quizArr.length){
+    questions.innerHTML = quizArr[currentQuestionIndex].question;
+    for(let i=0; i<quizArr[currentQuestionIndex].incorrect_answers.length; i++){
+      option[i].innerHTML = quizArr[currentQuestionIndex].incorrect_answers[uniqueRandomNumbers[i]]
+    }
+      }else if(currentQuestionIndex < 0){
+        currentQuestionIndex = 0;
+      }
+})
 
