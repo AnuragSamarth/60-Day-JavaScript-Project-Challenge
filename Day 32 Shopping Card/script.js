@@ -32,11 +32,12 @@ const productArray = [
 const productSection = document.querySelector('.product-sections');
 // console.log(productSection);
 
-let basket = []
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 const generateProducts = ()=>{
     return (productSection.innerHTML = productArray.map(arr =>{
         let {id, name,price,disc,img} = arr;
+        let search = basket.find((x) => x.id === id) || [];
         return `<div id=product-id-${id}  class="product">
        <div class="img-div">
          <img
@@ -52,7 +53,7 @@ const generateProducts = ()=>{
          <div class="price"><h3>$${price}</h3></div>
          <div class="add-card">
            <button id='dec' onclick="decrement(${id})">-</button>
-           <span id=${id}>0</span>
+           <span id=${id}>${search.item === undefined ? 0 : search.item}</span>
            <button id="inc" onclick="increment(${id})">+</button>
          </div>
        </div>
@@ -74,6 +75,7 @@ const increment = (id)=>{
     }else{
         search.item += 1;
     }
+    localStorage.setItem("data", JSON.stringify(basket));
     // console.log(basket);
     update(selectedItem.id);
 };
@@ -86,6 +88,7 @@ const decrement = (id)=>{
     else{
         search.item -= 1;
     }
+    localStorage.setItem("data", JSON.stringify(basket));
     // console.log(basket);
     update(selectedItem.id)
 };
@@ -102,3 +105,4 @@ let calculation = ()=>{
     const totalItem = document.querySelector('#card-count');
     totalItem.innerHTML =  basket.map(elem => elem.item).reduce((x,y) => (x+y),0)
 }
+calculation();
