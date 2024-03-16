@@ -93,6 +93,12 @@ const decrement = (id)=>{
 const update = (id)=>{
     //    console.log(id)
        let search = basket.find((x) => x.id === id);
-       console.log(search)
+    //    console.log(search)
     document.getElementById(id).innerHTML = search.item;
+    calculation();
+}
+
+let calculation = ()=>{
+    const totalItem = document.querySelector('#card-count');
+    totalItem.innerHTML =  basket.map(elem => elem.item).reduce((x,y) => (x+y),0)
 }
