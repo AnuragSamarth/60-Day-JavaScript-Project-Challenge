@@ -35,6 +35,14 @@ html,body{
     cursor: pointer;
     position: relative;
 }
+.left-side a{
+    text-decoration: none;
+    color: black;
+}
+.nav-bar a{
+   text-decoration: none;
+   color: black;
+}
 .card-count{
     position: absolute;
     /* background-color: red; */
