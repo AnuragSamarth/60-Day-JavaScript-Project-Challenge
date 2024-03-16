@@ -75,22 +75,25 @@ const increment = (id)=>{
     }else{
         search.item += 1;
     }
-    localStorage.setItem("data", JSON.stringify(basket));
     // console.log(basket);
     update(selectedItem.id);
+    localStorage.setItem("data", JSON.stringify(basket));
 };
 
 const decrement = (id)=>{
     let selectedItem = id;
     // console.log(selectedItem.id)
     let search = basket.find((x) => x.id === selectedItem.id);
-    if(search.item === 0) return; 
+
+    if(search === undefined) return;
+    else if(search.item === 0) return; 
     else{
         search.item -= 1;
     }
-    localStorage.setItem("data", JSON.stringify(basket));
-    // console.log(basket);
     update(selectedItem.id)
+    basket = basket.filter((x) => x.item !== 0);
+    // console.log(basket);
+    localStorage.setItem("data", JSON.stringify(basket));
 };
 
 const update = (id)=>{
