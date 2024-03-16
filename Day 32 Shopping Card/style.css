@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.nav-bar{
+    width: 100%;
+    height: 100px;
+    background-color: #6b6a6a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.right-side{
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.card-count{
+    position: absolute;
+    /* background-color: red; */
+    width: 10px;
+    height: 16px;
+    font-size: 17px;
+}
+.product-sections{
+    width: 100%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.product{
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+}
+.img-div{
+    width: 250px;
+    height: 200px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+.img-div img{
+    width: 250px;
+    height: 200px;
+    /* object-fit: contain; */
+    object-position: center;
+    overflow: hidden;
+    /* border-radius: 10px; */
+}
+.details{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.price-add-section{
+    width: 100%;
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.add-card > button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 35px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 700;
+}
