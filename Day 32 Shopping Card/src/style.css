@@ -104,3 +104,74 @@ html,body{
     cursor: pointer;
     font-weight: 700;
 }
+
+/**
+*  ! style rule for label, shopping-cart and some buttons
+**/
+
+.text-center{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.HomeBtn{
+    background-color: #212529;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.cart-item{
+    width: 400px;
+    height: 120px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+}
+.div-img{
+    width: 150px;
+    height: 120px;
+    border: 1px solid black;
+}
+.div-img img{
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+.ri-close-fill{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.title-price-x{
+    width: 100%;
+    padding: 10px;
+    /* background-color: rgb(102, 97, 97); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shopping-cart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cart-item-price{
+    width: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
