@@ -66,6 +66,7 @@ const increment = (id)=>{
     generateCartItem();
     update(selectedItem.id);
     localStorage.setItem("data", JSON.stringify(basket));
+totalAmount();
 };
 
 const decrement = (id)=>{
@@ -83,6 +84,8 @@ const decrement = (id)=>{
     generateCartItem();
     // console.log(basket);
     localStorage.setItem("data", JSON.stringify(basket));
+totalAmount();
+
 };
 
 const update = (id)=>{
@@ -99,5 +102,30 @@ const removeItem = (id)=>{
     basket = basket.filter((x)=> x.id !== selectedItem.id);
     localStorage.setItem("data", JSON.stringify(basket));
     generateCartItem();
+    calculation();
+   totalAmount();
 }
 
+const totalAmount = ()=>{
+    if(basket.lengtht !== 0){
+     let amount = basket.map((x)=>{
+        let {item,id} = x;
+        let search = productArray.find((y) => y.id === id) || [];
+           return item * search.price;
+     }).reduce((x,y)=> x+y,0)
+    //  console.log(amount);
+    label.innerHTML = `
+    <h2>Total Bill: $${amount}</h2>
+    <button class="checkout">Checkout</button>
+    <button class="removeAll" onclick="clearCart()">Clear Cart</button>
+    `
+    }else return
+}
+totalAmount();
+
+const clearCart = ()=>{
+    basket = []
+    generateCartItem();
+    calculation();
+    localStorage.setItem("data", JSON.stringify(basket));
+}

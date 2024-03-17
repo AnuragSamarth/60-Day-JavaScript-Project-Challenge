@@ -113,7 +113,7 @@ html,body{
     text-align: center;
     margin-bottom: 20px;
 }
-.HomeBtn{
+.HomeBtn,.checkout,.removeAll{
     background-color: #212529;
     border: none;
     color: white;
@@ -123,6 +123,12 @@ html,body{
     border: 1px solid black;
     border-radius: 10px;
     margin-top: 10px;
+}
+.checkout{
+    background-color: green;
+}
+.removeAll{
+    background-color: red;
 }
 .cart-item{
     width: 400px;
