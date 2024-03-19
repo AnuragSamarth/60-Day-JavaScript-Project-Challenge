@@ -14,7 +14,7 @@ const data = [
         ]
     },
     {
-        id:2,
+        id: 2,
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -28,7 +28,7 @@ const data = [
         ]
     },
     {
-        id:3,
+        id: 3,
         type: "boolean",
         difficulty: "medium",
         category: "Science: Computers",
@@ -40,7 +40,7 @@ const data = [
         ]
     },
     {
-        id:4,
+        id: 4,
         type: "boolean",
         difficulty: "medium",
         category: "Science: Computers",
@@ -52,7 +52,7 @@ const data = [
         ]
     },
     {
-        id:5,
+        id: 5,
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -66,7 +66,7 @@ const data = [
         ]
     },
     {
-        id:6,
+        id: 6,
         type: "boolean",
         difficulty: "medium",
         category: "Science: Computers",
@@ -78,7 +78,7 @@ const data = [
         ]
     },
     {
-        id:7,
+        id: 7,
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -92,7 +92,7 @@ const data = [
         ]
     },
     {
-        id:8,
+        id: 8,
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -106,7 +106,7 @@ const data = [
         ]
     },
     {
-        id:9,
+        id: 9,
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -120,7 +120,7 @@ const data = [
         ]
     },
     {
-        id:10,
+        id: 10,
         type: "multiple",
         difficulty: "medium",
         category: "Science: Computers",
@@ -138,46 +138,56 @@ const data = [
 
 const quizOptions = document.querySelector(".quiz-options")
 const quizQuestion = document.querySelector(".quiz-question h3")
-console.log(quizOptions);
-console.log(quizQuestion);
+const nextBtn = document.querySelector(".btn");
 
-const swapQuestion = ()=>{
-    return Math.floor(Math.random() * data.length + 1)
-}
 
-const generateQuestionAndOptions = ()=>{
-    let search = data.filter((elem)=> elem.id === swapQuestion())
-    console.log(search)
+let questionID = 0;
+const generateQuestionAndOptions = (id)=>{
+    let search = data.filter((elem)=> elem.id === id)
+    // console.log(search)
     
     let newArrData = [];
     search.forEach((elem)=>{
         newArrData = elem.incorrect_answers
-        quizQuestion.innerHTML = ` <p>${elem.question}</p>`
+        quizQuestion.innerHTML = ` <h3>${elem.question}</h3>`
     })
-    // console.log(newArrData)
     
     // 1st method to create and insert HTML element into specific element using clutter
-    // let clutter = '';
-//     newArrData.forEach((elem)=>{
-//       clutter += `
-//       <div class="option">
-//       <p>${elem}</p>
-//   </div>
-//       `
-//     })
-//     quizOptions.innerHTML = clutter;
+    let clutter = '';
+    newArrData.forEach((elem)=>{
+      clutter += `
+      <div class="option">
+      <p>${elem}</p>
+  </div>
+      `
+    })
+    quizOptions.innerHTML = clutter;
 
-
-//   2nd method to create and insert HTML element into specific element using map method
-   return (quizOptions.innerHTML = newArrData.map(elem =>{
-       return `
-       <div class="option">
-             <p>${elem}</p>
-        </div>
-       `
-   }).join('')
-   )
+// //   2nd method to create and insert HTML element into specific element using map method
+//    return (quizOptions.innerHTML = newArrData.map(elem =>{
+//        return `
+//        <div class="option">
+//              <p>${elem}</p>
+//         </div>
+//        `
+//    }).join('')
+//    )
 }
-generateQuestionAndOptions();
+// generateQuestionAndOptions();
 
-console.log(swapQuestion())
+
+nextBtn.addEventListener('click', nextQuestion);
+
+function nextQuestion(){
+    questionID++;
+    if(questionID <= 10){
+    generateQuestionAndOptions(questionID);
+     }else{
+      return `
+      <div class="option">
+      <p>Stop</p>
+  </div>
+      `
+     }
+}
+nextQuestion();
