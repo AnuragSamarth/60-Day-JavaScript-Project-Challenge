@@ -137,13 +137,22 @@ const data = [
 
 
 const quizOptions = document.querySelector(".quiz-options")
+const quizQuestion = document.querySelector(".quiz-question h3")
+console.log(quizOptions);
+console.log(quizQuestion);
 
-const generateOptions = ()=>{
-    let search = data.filter((elem)=> elem.id === 6)
-    // console.log(search)
+const swapQuestion = ()=>{
+    return Math.floor(Math.random() * data.length + 1)
+}
+
+const generateQuestionAndOptions = ()=>{
+    let search = data.filter((elem)=> elem.id === swapQuestion())
+    console.log(search)
+    
     let newArrData = [];
     search.forEach((elem)=>{
         newArrData = elem.incorrect_answers
+        quizQuestion.innerHTML = ` <p>${elem.question}</p>`
     })
     // console.log(newArrData)
     
@@ -166,6 +175,9 @@ const generateOptions = ()=>{
              <p>${elem}</p>
         </div>
        `
-   }).join(''))
+   }).join('')
+   )
 }
-generateOptions();
+generateQuestionAndOptions();
+
+console.log(swapQuestion())
