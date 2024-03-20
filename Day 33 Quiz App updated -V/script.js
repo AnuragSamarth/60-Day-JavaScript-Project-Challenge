@@ -139,9 +139,17 @@ const data = [
 const quizOptions = document.querySelector(".quiz-options")
 const quizQuestion = document.querySelector(".quiz-question h3")
 const nextBtn = document.querySelector(".btn");
+const questionIndex = document.querySelector(".questions h5");
+const scores = document.querySelector(".score h5"); 
+// const option = document.querySelectorAll(".option")
+// console.log(option)
+// console.log(questionIndex)
+
+
 
 
 let questionID = 0;
+let score = 0;
 const generateQuestionAndOptions = (id)=>{
     let search = data.filter((elem)=> elem.id === id)
     // console.log(search)
@@ -157,7 +165,7 @@ const generateQuestionAndOptions = (id)=>{
     newArrData.forEach((elem)=>{
       clutter += `
       <div class="option">
-      <p>${elem}</p>
+     <p>${elem}</p>
   </div>
       `
     })
@@ -182,12 +190,24 @@ function nextQuestion(){
     questionID++;
     if(questionID <= 10){
     generateQuestionAndOptions(questionID);
-     }else{
-      return `
-      <div class="option">
-      <p>Stop</p>
-  </div>
-      `
+    questionIndex.innerText = `Questions: ${questionID}/10` 
      }
 }
 nextQuestion();
+
+
+quizOptions.addEventListener('click', checkAnswer)
+
+function checkAnswer(e){
+   let clickedOption = e.target.innerText;
+   let search = data.filter((elem)=> elem.id === questionID);   
+   search.forEach((elem)=>{
+    if(elem.correct_answer === clickedOption){
+        console.log('right answer')
+        score++;
+        scores.innerText = `Score: ${score}`;
+    }else{
+        return
+    }
+   })
+}
