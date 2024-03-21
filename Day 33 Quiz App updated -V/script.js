@@ -141,11 +141,6 @@ const quizQuestion = document.querySelector(".quiz-question h3")
 const nextBtn = document.querySelector(".btn");
 const questionIndex = document.querySelector(".questions h5");
 const scores = document.querySelector(".score h5"); 
-// const option = document.querySelectorAll(".option")
-// console.log(option)
-// console.log(questionIndex)
-
-
 
 
 let questionID = 0;
@@ -191,6 +186,9 @@ function nextQuestion(){
     if(questionID <= 10){
     generateQuestionAndOptions(questionID);
     questionIndex.innerText = `Questions: ${questionID}/10` 
+     }
+     if(questionID == data.length){
+        nextBtn.textContent = 'Finish';
      }
 }
 nextQuestion();
