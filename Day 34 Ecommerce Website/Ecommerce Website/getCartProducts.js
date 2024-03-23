@@ -1,3 +1,5 @@
+import { displayCartsQuantity } from "./displayCartsQuantity";
+
 export const getCartProductFromLS = ()=>{
     let cartProducts = localStorage.getItem('cartProductLS');
 
@@ -6,5 +8,7 @@ export const getCartProductFromLS = ()=>{
     }
 
     cartProducts = JSON.parse(cartProducts);
+    displayCartsQuantity(cartProducts);
+
     return cartProducts;
 }
