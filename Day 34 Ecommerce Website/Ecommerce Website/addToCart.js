@@ -13,9 +13,6 @@ export const addToCart = (event,id,stock)=>{
     quantity = Number(quantity);
     price =Number((price * quantity).toFixed(2));
 
-    console.log(price)
-    console.log(quantity)
-    
     arrLocalStrageProduct.push({ id, quantity, price })
     localStorage.setItem('cartProductLS',JSON.stringify(arrLocalStrageProduct))
 }
