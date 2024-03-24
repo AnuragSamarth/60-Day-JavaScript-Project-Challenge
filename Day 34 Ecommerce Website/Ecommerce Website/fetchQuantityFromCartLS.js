@@ -1,9 +1,9 @@
 import { getCartProductFromLS } from "./getCartProducts"
 
 export const fetchQuantityFromCartLS = (id,price) =>{
-    let cartProductsFromLS = getCartProductFromLS()
+    let cartProductLS = getCartProductFromLS()
     
-    let existingProduct = cartProductsFromLS.find((curProd) => curProd.id === id);
+    let existingProduct = cartProductLS.find((curProd) => curProd.id === id);
     
     let quantity = 1;
 
