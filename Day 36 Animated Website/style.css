@@ -13,6 +13,69 @@ html,body{
     /* height: 100vh; */
     /* background-color: #111; */
 }
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: lightcoral; */
+    padding: 2vw 7vw;
+    /* overflow: hidden; */
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    justify-content: space-around;
+}
+button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: #0DA34E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.88vw;
+    
+}
+button svg{
+    height: 3vw;
+}
+#nav-part2 h4{
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+nav:hover #nav-bottom ,#nav-bottom-text{
+    height: 110%;
+    bottom: -110%;
+}
+#nav-bottom{
+    position: absolute;
+    width: 85%;
+    height: 0%;
+    bottom: 0%;
+    transition: all ease 0.56s;
+    background-color: #111;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+}
+#nav-bottom-text{
+    width: 65%;
+    height: 0%;
+    bottom: 0%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rebeccapurple;
+}
+.bottom-nav h5{
+     line-height: 25px;
+}
 #page1{
     width: 100%;
     height: 100vh;
