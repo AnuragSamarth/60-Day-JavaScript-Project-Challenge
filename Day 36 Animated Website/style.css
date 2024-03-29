@@ -53,7 +53,7 @@ nav:hover #nav-bottom ,#nav-bottom-text{
 }
 #nav-bottom{
     position: absolute;
-    width: 85%;
+    width: 86%;
     height: 0%;
     bottom: 0%;
     transition: all ease 0.56s;
@@ -83,6 +83,7 @@ nav:hover #nav-bottom ,#nav-bottom-text{
     align-items: center;
     justify-content: center;
     background-color: #111;
+    overflow: hidden;
 }
 #page1 h1{
     font-size: 8.5vw;
@@ -163,5 +164,81 @@ nav:hover #nav-bottom ,#nav-bottom-text{
 #page2{
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #111;
+    position: relative;
+    padding: 1vw 7vw;
+    overflow: hidden;
+}
+#page2-left{
+    width: 35%;
+    height: 88%;
+    /* background-color: #4d4d4d; */
+    /* margin-left: 7vw; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+#top-page2-left{
+    width: 40%;
+    /* background-color: #0DA34E; */
+    font-size: 1vw;
+    font-weight: 200;
+    padding-top: 30px;
+}
+#bottom-page2-left{
+    font-size: 1vw;
+    font-weight: 400;
+}
+#page2-right{
+    width: 55%;
+    height: 88%;
+    /* background-color: #5d5d5d;    */
+}
+.page2-right-div{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 25%;
+    border-bottom: 1px solid rgb(137, 137, 137);
+    padding-top: 30px;
+    margin-top: 10px;
+    /* background-color: #0DA34E; */
+    position: relative;
+}
+.last-div{
+    border-bottom: none;
+}
+.page2-right-heading{
+    width: 60%;
+    /* background-color: #0DA34E; */
+}
+.page2-right-heading h3{
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+.corner-div{
+    width: 20%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.corner-div p{
+    font-size: 1vw;
+    font-weight: 100;
+}
+.arrow{
+    font-size: 1.5vw;
+}
+.page2-right-div img{
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    scale: 0;
 }
