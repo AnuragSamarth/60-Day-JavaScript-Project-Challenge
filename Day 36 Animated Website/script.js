@@ -47,6 +47,7 @@
 // }
 // page3VideoAnimation()
 
+function page7VideoAnimation(){
 let sections =  document.querySelectorAll(".section-right");
 sections.forEach(elem => {
     elem.addEventListener("mouseenter", (e)=>{
@@ -58,3 +59,5 @@ sections.forEach(elem => {
     elem.childNodes[3].load();
     })
 })
+}
+page7VideoAnimation()
