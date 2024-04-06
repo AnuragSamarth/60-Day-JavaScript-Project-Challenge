@@ -114,3 +114,27 @@ page8SectionImgRight.addEventListener("mouseleave", ()=>{
 })
 }
 page8Animation()
+
+function page13CursorAnimation(){
+const page13TextContainer = document.querySelector("#page13-text-container");
+const cursor = document.querySelector("#page13-custom-cursor");
+// console.log(page13TextContainer)
+
+page13TextContainer.addEventListener("mouseenter", ()=>{
+    gsap.to(cursor, {
+       scale: 1,
+    })
+})
+
+page13TextContainer.addEventListener("mousemove", (e)=>{
+    cursor.style.left = e.x+"px";
+    cursor.style.top = e.y+"px";
+})
+
+page13TextContainer.addEventListener("mouseleave", ()=>{
+    gsap.to(cursor, {
+        scale: 0,
+     })
+})
+}
+page13CursorAnimation()
