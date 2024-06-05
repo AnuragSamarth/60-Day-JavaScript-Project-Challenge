@@ -1044,7 +1044,7 @@ summary::marker{
     font-size: 2vw;
 }
 #page15{
-    width: 100%;
+    width: 100%;           
     height: 15vh;
     display: flex;
     align-items: center;
