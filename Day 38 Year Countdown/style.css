@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(89,81,222,0.9697841726618706) 0%, rgba(92,170,255,0.9467625899280575) 50%);
+}
+#main h3{
+    font-size: 2.5vw;
+    font-family: sans-serif;
+}
+.container{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.box{
+    width: 30%;
+    height: 30%;
+    margin: 0 10px;
+    font-size: 30px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
